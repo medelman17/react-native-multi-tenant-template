@@ -1,0 +1,20 @@
+//
+//  Debug.xcconfig
+//  exampleApp
+//
+//  Created by Michael Edelman on 10/26/19.
+//  Copyright © 2019 Facebook. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include? "Config.xcconfig"
+APP_NAME = $(TENANT)-debug
+RN_APP_NAME = $(TENANT)-debug
+RN_APP_BUNDLE_ID = dev.edelman.$(TENANT)-debug
+RN_APP_VERSION = 0.1
+
+
+APPCENTER_SECRET_VALUE = $(AC_APP_SECRET_VALUE)
+AC_CODE_PUSH_KEY = $(AC_APP_SECRET_VALUE)

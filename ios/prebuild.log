@@ -1,0 +1,4 @@
+DEV
+cp: /Users/edelman215/Projects/Personal/Blog/context-in-rn-apps/exampleApp/ios/../tenant_config/lessor/ios/AppIcon.appiconset/*: No such file or directory
+cp: /Users/edelman215/Projects/Personal/Blog/context-in-rn-apps/exampleApp/ios/../tenant_config/lessor/ios/LaunchImage.launchimage/*: No such file or directory
+Pre-build has executed successfully!
