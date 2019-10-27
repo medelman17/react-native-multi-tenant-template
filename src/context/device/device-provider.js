@@ -31,7 +31,6 @@ export function DeviceProvider({children, ...props}) {
 }
 
 export function useDeviceState() {
-  console.log('hey');
   const context = React.useContext(DeviceContext);
   if (context === undefined) {
     throw new Error('useDeviceState must be used within a DeviceProvider');

@@ -1,13 +1,15 @@
 import React from 'react';
 import {PlatformProvider, usePlatformState} from '../platform';
 import {DeviceProvider, useDeviceState} from '../device';
+import {ConfigProvider, useConfig} from '../config';
 
 export const InfoContext = React.createContext({});
 
-export function getInitialContextState(props) {
+function getInitialContextState(props) {
   return {
     platform: usePlatformState(),
     device: useDeviceState(),
+    config: useConfig(),
   };
 }
 
@@ -30,10 +32,12 @@ export function useAppInfo(props) {
 
 export default props => {
   return (
-    <PlatformProvider>
-      <DeviceProvider>
-        <InfoProvider>{props.children}</InfoProvider>
-      </DeviceProvider>
-    </PlatformProvider>
+    <ConfigProvider>
+      <PlatformProvider>
+        <DeviceProvider>
+          <InfoProvider>{props.children}</InfoProvider>
+        </DeviceProvider>
+      </PlatformProvider>
+    </ConfigProvider>
   );
 };
